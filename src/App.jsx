@@ -49,7 +49,7 @@ function App() {
           "deploy": "gh-pages -d build"
         },
         "homepage": "깃 배포 주소/"
-3. 커밋 & 푸쉬
-4. 터미널에 npm run deploy
+3. 터미널에 npm run deploy
+4. 커밋 & 푸쉬
 5. 깃 레포지토리 - 설정 - 렌더링 페이지 gh-pages로 선택
 */
