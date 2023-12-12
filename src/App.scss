@@ -1,0 +1,309 @@
+// 본문 폰트 IBM Plex Sans KR // font-family: 'IBM Plex Sans KR', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;600;800;900&display=swap');
+// H1 영어 폰트 (only 대문자) // font-family: 'Ysabeau SC', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@100;200;300;400;500;600;900&display=swap');
+// 상단 네비 폰트 (날림 폰트) //  font-family: 'Dai Banna SIL', serif;
+@import url('https://fonts.googleapis.com/css2?family=Dai+Banna+SIL:wght@400;600;700&display=swap');
+
+
+//공통 클래스
+.changeWhite {
+   background-color: rgba(255, 255, 255, .95); border-bottom: 1px solid rgba(114, 112, 112, 0.2);
+}
+.invert {filter: invert(1);}
+.flexCenter {display: flex; justify-content: center; align-items: center;}
+
+.originPosition{transform: translateY(0px) translateX(0px) scale(1) !important;}
+.originVisible {visibility: visible; opacity: 1 !important;}
+.transPosition{transform: translateY(500px) scale(.5); transition: .5s;}
+
+
+// 텍스트 태그
+h1{font-size: 40px; letter-spacing: -2px; font-family: 'Ysabeau SC', sans-serif; font-weight: 600; }
+span{font-size: 14px; }
+a{transition: .1s ease-in-out;}
+
+.inner{padding-left: 150px; height: 100vh;
+   }
+
+
+//호버시 어두워지는 박스커버
+.BoxCover{
+   position: absolute; top: 0; left: 0; z-index: 10; cursor: pointer;
+   width: 100%; height: 100%; transition: .5s; opacity: 0;
+   &:hover{background: rgb(0, 0, 0, .5); opacity: 1; }
+}
+
+
+// 스크롤바 설정
+::-webkit-scrollbar{width: 0px;}
+
+
+//컬러 팔레트
+$menuBack : #54635cde ;
+$softBack : #0a3d273b ;
+$textHover : #db321c ;
+$gray: #333 ;
+
+$boxShadow : rgba(0, 0, 0, 0.08) 0px 4px 12px; 
+
+
+
+
+body{ // 전체 바탕색
+   width: 100vw; height: fit-content ;background: whitesmoke; overflow: hidden;
+   font-family: 'IBM Plex Sans KR', sans-serif; line-height: 2; letter-spacing: 1.2px;
+   font-size: 18px;
+
+}
+#App{}
+
+
+
+// ■■■■■ 문서 시작 ■■■■■
+// ■■■■■ nav ■■■■■
+#NavLeft{
+   position: fixed; width: 150px; height: 100vh; padding: 10px; box-sizing: border-box;
+   background: #54635cb4; z-index: 100; 
+   display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+   // 맥 스타일 박스 쉐도우
+   border-radius: 0 30px 30px 0; box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+   // 로고 부분
+   h1{height: 20%; display: flex; ;align-items: center; font-family: 'Dai Banna SIL', serif;}
+   >.nav{
+      li{
+         position: relative; height: 60px; box-sizing: border-box;
+         font-family: 'Ysabeau SC', sans-serif; font-size: 28px; text-align: center; font-weight: 600;
+         .active::before {
+            content: ""; position: absolute; top: 50%; left: 100%;
+            border-width: 10px; border-style: solid; border-color: transparent transparent transparent lavender;
+            margin-top: -10px; 
+          }
+         &:hover a{color: lavender; border-bottom: 1px solid lavender;  }
+         a{width: 150px; height: 60px;  display: block; transition: .3s;}
+      }
+
+   }
+   >.sns{
+      width: 100%; padding: 0 20px; 
+      display: flex; flex-direction: row; flex-wrap: wrap;
+      li{
+         width: 50%; display: flex; justify-content: center; font-size: 30px; transition: .5s;
+         a>svg{
+            &:hover{color: lavender; transform: scale(1.3); transition: .5s;}
+         }
+      }
+   }
+   >div{display: flex; flex-direction: column;
+      >#SmileButton{scale: 1;}
+      em{}
+      span{font-weight: bold;}
+   }
+   // nav 메뉴 호버 버튼
+   .nav-Cover{display: none; transition: .5s;
+      position: absolute; top: 50%; right: -5px; transform: translateY(-50%);
+      color: white; font-size: 20px; writing-mode :vertical-lr;
+      
+   }
+}
+
+
+// ■■■■■ Home ■■■■■
+#Home{
+   width: 100vw;height: 100vh;
+   .canvasBox{
+      width: 100vw; height: 100vh; position: relative; overflow: hidden;
+      canvas{
+         object-fit: fill;
+         background: url(../src/img/canvas.jpg);
+         background-size: cover;
+      } // 캔버스 배경색 (z = 1)
+      h1{
+         position: absolute;  z-index: 2; top: 50px ; left: 200px;
+         color: white; opacity: .5;font-size: 30px; font-weight: 800;
+         width: fit-content; padding: 0; margin: 0;
+         font-family: 'Dai Banna SIL', serif;
+      }
+      .mouseBox{
+         width: 42px; height: 70px;
+         position: absolute; transform: scale(.8) ;
+         z-index: 10; bottom: 5vh; right: 2.5vw; 
+         >.mouse{}
+         >p{top: 4vh; left: -2vh;}
+      }
+      
+   }
+   // 섹션 1
+   .section1{width: 100vw; height: 100vh; overflow: hidden;
+      .inner{
+         display: flex; flex-direction: column ;align-items: center; justify-content: center;
+         >div{display: flex; width: 70%; height: fit-content; 
+            .profile{ // 좌측 div
+               width: 40%;  overflow: hidden; 
+               display: flex; flex-direction: column; justify-content: space-around; align-items: center;
+               border-radius: 30px; box-shadow: $boxShadow;
+               box-sizing: border-box;
+               background: #e7e6e6a8; background-image: url(./img/canvas.jpg);
+               background-blend-mode: color;
+               img{
+                  width: 75%; height: 55%; border-radius: 50% ; object-fit: fill;
+                  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;}
+               ul{
+                  width: 80%; height: 30%; padding: 0 30px;
+                  display: flex; flex-direction: column; justify-content: center;
+                  li{
+                     font-family: 'Ysabeau SC', sans-serif; font-size: 21px;
+                     display: flex; justify-content: space-between;  align-items: center; 
+                     // 모달 버튼 li
+                     &:nth-child(3){cursor: pointer;}
+                     &:hover:nth-child(3),&:hover:nth-child(3) span{color: $textHover; font-weight: bold;}
+                     span{
+                        font-family: 'IBM Plex Sans KR', sans-serif; font-size: 17px; color: black;
+                     }
+                  }
+               }
+            }
+            .greetings{ // 우측 div
+               width: 60%; opacity: 0; transition: 1s;
+               padding: 20px; margin-left: 50px;
+               display: flex; flex-direction: column; justify-content: center;
+               em{
+                  display: block; margin-bottom: 20px;
+                  font-style: normal; font-size: 19px; }
+            }
+         }  
+      }
+   }
+   // 섹션 2
+   .section2{width: 100vw; height: 100vh; overflow: hidden;
+      .inner{
+         display: flex; flex-direction: column ;align-items: center; justify-content: center;
+         #Skill{
+            width: fit-content;
+            h1{text-align: center; font-family: 'Ysabeau SC', sans-serif; }
+            span{display: block; text-align: right; color:#e84e41 ; font-weight:bold;}
+            .Skill-box{
+               // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+               width: 1100px; display: flex; overflow: hidden;
+               .Skill-button{ transform: translateX(-2000px); transition: .7s; @extend .flexCenter;
+                  .skill-Img{ transform: translateX(4000px); transition: 1.2s; 
+                     width: 80px; height: 80px; padding: 10px; margin: 0;
+                     // ↑ 총 너비 100px으로 11개 img 외에 것들은 슬라이드로 작동됨.
+                  &:hover{transform: translateY(-30px); transition: .3s;}
+                  }
+               }
+            }
+            .Skill-memo{ // Skill-button 의 tab 메뉴
+               width: 1100px; height: 350px; 
+               margin-top: 20px;
+               transform: translateY(700px); transition: .5s ease-in-out .9s;
+               >div{
+                  h3{margin-bottom: 10px; font-family: 'Ysabeau SC', sans-serif; font-size: 22px;}
+                  p{margin-bottom: 10px;}
+               }
+            }
+         }
+      }
+   }
+}
+
+
+// ■■■■■ Contact ■■■■■
+#Contact{
+   .inner{
+      >div{
+         width: 70%; height: 100%; margin: 0 auto ; transition: .5s;
+         display: flex; flex-direction: column; justify-content: center; align-items: center;
+         >ul{
+            width: 100%; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            >li{
+               width: 30%; height: 180px; border-radius: 20px; overflow: hidden;
+               box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px; @extend .flexCenter; flex-direction: column;
+               font-size: 22px;
+               &:nth-child(2){cursor: pointer;}
+               &:nth-child(2):hover{background: $softBack;}
+               &:nth-child(2):hover svg{transform: scale(1.4); transition: .5s;}
+               svg{font-size: 50px; padding-bottom: 10px; margin-top: 15px;}
+            }
+         }
+         #TodoList{padding-top: 0;
+            >ul{
+               >li{
+                  >button{width: 10%;
+                     display: flex; align-items: center; justify-content: center ;
+                    
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+// ■■■■■ Port ■■■■■
+#Port{
+   width: 100vw;height: 100vh;
+   .inner{
+      height: 700%; // 포트폴리오 갯수 * 100 %
+      display: flex; flex-direction: column-reverse;
+      section{width: 100%;height: 100vh;  @extend .flexCenter; 
+         >div{ // section inner (섹션 이너)
+            width: 80%; height: 80%; 
+            box-shadow: $boxShadow; border-radius: 20px; 
+            >h1{
+               background: #9eb3a850; 
+               padding: 0 70px; border-radius: 20px 20px 0 0; box-sizing: border-box;
+               border-bottom: 1px solid #9eb3a850;
+               
+            }
+            >div{
+               width: 100%; height: 80%; padding: 40px 70px; margin-top: 30px;
+               display: flex; align-content: center; justify-content: space-between;
+               .jpegBox{
+                  width: 40%; height: 100%;
+                  display: flex; justify-content: center; align-items: center;
+                  img{border-radius: 20px; width: 100%;}
+               }
+               article{ 
+                  width: 60%; height: 100%; 
+                  display: flex; flex-direction: column; justify-content: center;
+                  padding-left: 100px;
+                  h3{margin-bottom: 40px;}
+                  p{
+                    margin-bottom: 30px;
+                     &:nth-child(2){display: flex; align-items: center;}
+                     &:nth-last-child(1){margin-bottom: 0;}
+                        span{font-size: 18px; font-weight: bold;}
+                        a:hover{color: $textHover;}
+                        img{width: 50px; height: 50px; margin-left: 15px; margin-right: 5px;}
+                  }
+                  div{display: flex; justify-content: space-between;
+                     a{width: 47%; 
+                        p{
+                           button{}
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+// ■■■■■ Dev ■■■■■
+#Dev{
+   .inner{
+      iframe{
+         width: 100%; height: 100%; position: relative; z-index: 2;
+         border: none; border-radius: 30px; 
+         box-shadow: $boxShadow;
+      }
+   }
+}
+
+
+
+

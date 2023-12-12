@@ -1,0 +1,892 @@
+//컬러 팔레트
+$menuBack : #54635cde ;
+$softBack : #0a3d273b ;
+$textHover : #db321c ;
+$gray: #333 ;
+
+$boxShadow : rgba(0, 0, 0, 0.08) 0px 4px 12px; 
+
+
+// ─────────────────── 반응형 미디어 쿼리 ───────────────────
+// ─────────────────── 반응형 미디어 쿼리 ───────────────────
+// 불필요한 코드 삭제 해야함.
+
+
+// px에 따른 환경
+@media screen and (max-width: 1700px){
+   body{overflow:none}
+
+   // ■■■■■ Home ■■■■■
+#Home{
+   // 섹션 1
+   .section1{width: 100vw; height: 100vh; overflow: hidden;
+      .inner{
+         >div{display: flex; width: 85%; height: fit-content; 
+            .profile{ // 좌측 div
+               img{}
+               ul{
+                  li{
+                     span{}
+                  }
+               }
+            }
+            .greetings{ // 우측 div
+               em{}
+            }
+         }  
+      }
+   }
+   // 섹션 2
+   .section2{
+      .inner{
+         #Skill{
+            h1{}
+            .Skill-box{
+               // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+               .Skill-button{ 
+                  .skill-Img{ 
+                  }
+               }
+            }
+            .Skill-memo{ // Skill-button 의 tab 메뉴
+               >div{
+                  h3{}
+                  p{}
+               }
+            }
+         }
+      }
+   }
+}
+
+// ■■■■■ Contact ■■■■■
+#Contact{
+   .inner{
+      >div{
+         width: 85%;
+         >ul{
+            >li{
+               svg{}
+            }
+         }
+         #TodoList{}
+      }
+   }
+}
+
+
+// ■■■■■ Port ■■■■■
+#Port{
+   .inner{
+      section{
+         >div{ // section inner (섹션 이너)
+            h1{}
+            >div{
+               .jpegBox{
+                  img{}
+               }
+               article{ 
+                  h3{}
+                  p{
+                        img{}
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+}
+@media screen and (max-width: 1400px){
+// ■■■■■ Contact ■■■■■
+#Contact{
+   .inner{
+      >div{
+         >ul{
+            >li{
+               font-size: 18px ;
+               svg{}
+            }
+         }
+         #TodoList{}
+      }
+   }
+}
+}
+@media screen and (max-width: 1100px){
+   // ■■■■■ Home ■■■■■
+#Home{
+   // 섹션 1
+   .section1{
+      .inner{
+         >div{
+            display: flex; flex-direction: column; 
+            height: 100vh; padding: 50px 0;
+            .profile{ // 위쪽 div
+               width: 100%; height: 35%; flex-direction: row;
+               padding: 0 30px;
+               img{width: 75%; height: 80%;}
+               ul{width: 100%;
+                  li{
+                     span{}
+                  } 
+               }
+            }
+            .greetings{ // 아래쪽 div
+               width: 100%; height: 65%;
+               margin: 0; padding: 0;
+               h1{margin-top: 50px;}
+               em{margin-bottom: 15px; font-size: 18px;}
+            }
+         }  
+      }
+   }
+   // 섹션 2
+   .section2{
+      .inner{
+         #Skill{
+            h1{}
+            .Skill-box{width: 750px;
+               // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+               .Skill-button{ 
+                  .skill-Img{ 
+                  }
+               }
+            }
+            .Skill-memo{ // Skill-button 의 tab 메뉴
+               width: 750px; height: 450px;
+               >div{
+                  h3{}
+                  p{}
+               }
+            }
+         }
+      }
+   }
+}
+
+// ■■■■■ Contact ■■■■■
+#Contact{
+   .inner{
+      >div{
+         >ul{
+            >li{
+               font-size: 15px;
+               svg{}
+            }
+         }
+         #TodoList{
+            >ul{
+               >li{
+                  >button{width: 10%;}
+               }
+            }
+         }
+      }
+   }
+}
+
+
+// ■■■■■ Port ■■■■■
+#Port{
+   .inner{
+      section{
+         >div{ // section inner (섹션 이너)
+            width: 75%;
+            h1{font-size: 33px}
+            >div{
+               padding: 0 50px;
+               .jpegBox{
+                  img{}
+               }
+               article{padding-left: 70px;
+                  h3{}
+                  p{
+                        img{width: 40px; height: 40px;}
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+}
+// 950픽셀 이하부터 폰트기본  font-family: sans-serif;
+@media screen and (max-width: 950px){
+body{font-family: sans-serif;}
+   // ■■■■■ Home ■■■■■
+#Home{
+   // 섹션 1
+   .section1{
+      .inner{
+         >div{
+            .profile{ // 위쪽 div
+               img{}
+               ul{
+                  li{
+                     span{}
+                  } 
+               }
+            }
+            .greetings{ // 아래쪽 div
+               h1{}
+               em{font-size: 16px;}
+            }
+         }  
+      }
+   }
+   // 섹션 2
+   .section2{
+      .inner{
+         #Skill{
+            h1{}
+            .Skill-box{width: 650px;
+               // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+               .Skill-button{ 
+                  .skill-Img{ 
+                  }
+               }
+            }
+            .Skill-memo{ // Skill-button 의 tab 메뉴
+               width: 650px; height: 500px;
+               >div{
+                  h3{}
+                  p{font-size: 16px;}
+               }
+            }
+         }
+      }
+   }
+}
+
+// ■■■■■ Contact ■■■■■
+#Contact{
+   .inner{
+      >div{width: 80%;
+         >ul{display: flex; flex-direction: column;
+            >li{
+               height: 120px; width: 100%; margin-bottom: 30px;
+               font-size: 18px;
+               svg{font-size: 40px;}
+            }
+         }
+         #TodoList{
+         }
+      }
+   }
+}
+
+
+// ■■■■■ Port ■■■■■
+#Port{
+   .inner{
+      section{
+         >div{ // section inner (섹션 이너)
+            h1{font-size: 29px;}
+            >div{
+               .jpegBox{
+                  img{}
+               }
+               article{
+                  h3{font-size: 1.05em; margin-bottom: 30px;}
+                  p{font-size: 16px; margin-bottom: 20px;
+                     span{font-size: 16px;}
+                     img{}
+                  }
+                  button{margin-top: 20px;}
+               }
+            }
+         }
+      }
+   }
+}
+
+}
+@media screen and (max-width: 850px){
+   // ■■■■■ Home ■■■■■
+#Home{
+   // 섹션 1
+   .section1{
+      .inner{
+         >div{
+            .profile{ // 위쪽 div
+               img{}
+               ul{
+                  li{
+                     span{}
+                  } 
+               }
+            }
+            .greetings{ // 아래쪽 div
+               h1{}
+               em{font-size: 16px;}
+            }
+         }  
+      }
+   }
+   // 섹션 2
+   .section2{
+      .inner{
+         #Skill{
+            h1{}
+            .Skill-box{width: 550px;
+               // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+               .Skill-button{ 
+                  .skill-Img{ 
+                  }
+               }
+            }
+            .Skill-memo{ // Skill-button 의 tab 메뉴
+               width: 550px; height: 500px;
+               >div{
+                  h3{}
+                  p{font-size: 16px;}
+               }
+            }
+         }
+      }
+   }
+}
+
+// ■■■■■ Contact ■■■■■
+#Contact{
+   .inner{
+      >div{width: 80%;
+         >ul{display: flex; flex-direction: column;
+            >li{
+               height: 120px; width: 100%; margin-bottom: 30px;
+               font-size: 18px;
+               svg{font-size: 40px;}
+            }
+         }
+         #TodoList{
+         }
+      }
+   }
+}
+
+
+// ■■■■■ Port ■■■■■
+#Port{
+   .inner{
+      section{
+         >div{ // section inner (섹션 이너)
+            height: 90%;
+            h1{line-height: 1.2; padding: 15px 70px; }
+            >div{display: flex; flex-direction: column; justify-content: center;
+               height: 90%; margin: 0;
+               .jpegBox{
+                  width: 100%; height: 250px; margin: 20px 0 ;
+                  display: flex; align-items: center; justify-content: center;
+                  img{margin: 0 auto; width: 50%;}
+               }
+               article{
+                  width: 100%; height: fit-content; ;padding: 0;
+                  display: flex;
+                  h3{margin-bottom: 20px; text-align: center;}
+                  p{
+                     width: 100%; margin-bottom: 15px;
+                     justify-content: center; text-align: center;
+                     &:nth-last-child(2){text-align: start;}
+                     >span{margin: 0 auto; }
+                     img{}
+                  }
+                  a{margin: 0 auto;}
+                  button{}
+               }
+            }
+         }
+      }
+   }
+}
+
+}
+@media screen and (max-width: 720px){
+   // ■■■■■ Home ■■■■■
+#Home{
+   // 섹션 1
+   .section1{
+      .inner{
+         >div{
+            .profile{ // 위쪽 div
+               img{}
+               ul{
+                  li{
+                     span{}
+                  } 
+               }
+            }
+            .greetings{ // 아래쪽 div
+               h1{}
+               em{font-size: 15px;}
+            }
+         }  
+      }
+   }
+   // 섹션 2
+   .section2{
+      .inner{
+         #Skill{
+            h1{}
+            .Skill-box{width: 450px;
+               // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+               .Skill-button{ 
+                  .skill-Img{ 
+                  }
+               }
+            }
+            .Skill-memo{ // Skill-button 의 tab 메뉴
+               width: 450px; height: 550px;
+               >div{
+                  h3{}
+                  p{font-size: 15px;}
+               }
+            }
+         }
+      }
+   }
+}
+
+// ■■■■■ Contact ■■■■■
+#Contact{
+   .inner{
+      >div{
+         >ul{
+            >li{
+               svg{}
+            }
+         }
+         #TodoList{
+            >ul{
+               >li{
+                  >button{width: 12%;}
+               }
+            }
+         }
+      }
+   }
+}
+
+
+// ■■■■■ Port ■■■■■
+#Port{
+   .inner{
+      section{
+         >div{ // section inner (섹션 이너)
+            h1{}
+            >div{padding: 40px 40px;
+               .jpegBox{
+                  height: 230px;
+                  margin: 0; margin-bottom: 20px;
+                  img{}
+               }
+               article{
+                  h3{}
+                  p{
+                     >span{}
+                     img{}
+                  }
+                  a{}
+                  button{}
+               }
+            }
+         }
+      }
+   }
+}
+
+}
+// 650픽셀 이하부터 좌측 nav메뉴 접기
+@media screen and (max-width: 650px){
+   .inner{padding-left: 30px; 
+   }
+   
+         // ■■■■■ Nav ■■■■■
+   #NavLeft{
+      width: 530px; overflow: hidden;
+      transition: .5s; transform: translateX(-500px); 
+      &:hover{width: 150px; background: #54635c; transform: translateX(0px);}
+      &:hover .nav-Cover{display: none;}
+      h1{}
+      >.nav{
+         li{
+            &:hover a{}
+            a{}
+         }
+      }
+      >.sns{
+         li{
+            a>svg{
+               &:hover{}
+            }
+         }
+      }
+      >div{
+         >#SmileButton{}
+         em{}
+         span{}
+      }
+      .nav-Cover{
+         display: block;
+      }
+   }
+
+      // ■■■■■ Home ■■■■■
+   #Home{
+      .canvasBox{
+         canvas{
+         } // 캔버스 배경색 (z = 1)
+         h1{top: 50px ; left: 70px;}
+         .mouseBox{
+            >.mouse{}
+            >p{}
+         }
+      }
+      // 섹션 1
+      .section1{
+         .inner{
+            >div{
+               .profile{ // 위쪽 div
+                  img{}
+                  ul{
+                     li{
+                        span{}
+                     } 
+                  }
+               }
+               .greetings{ // 아래쪽 div
+                  h1{}
+                  em{}
+               }
+            }  
+         }
+      }
+      // 섹션 2
+      .section2{
+         .inner{
+            #Skill{
+               h1{}
+               .Skill-box{width: 450px;
+                  // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+                  .Skill-button{ 
+                     .skill-Img{ 
+                     }
+                  }
+               }
+               .Skill-memo{ // Skill-button 의 tab 메뉴
+                  width: 450px; height: 550px;
+                  >div{
+                     h3{}
+                     p{}
+                  }
+               }
+            }
+         }
+      }
+   }
+   
+   // ■■■■■ Contact ■■■■■
+   #Contact{
+      .inner{
+         >div{
+            >ul{
+               >li{
+                  svg{}
+               }
+            }
+            #TodoList{
+               >ul{
+                  >li{
+                     >button{}
+                  }
+               }
+            }
+         }
+      }
+   }
+   // ■■■■■ Port ■■■■■
+   #Port{
+      .inner{
+         section{
+            >div{ // section inner (섹션 이너)
+               width: 85%;
+               h1{}
+               >div{
+                  .jpegBox{
+                     img{}
+                  }
+                  article{
+                     h3{}
+                     p{
+                        >span{}
+                        img{}
+                     }
+                     a{}
+                     button{}
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 520px){
+         // ■■■■■ Nav ■■■■■
+   #NavLeft{
+      h1{}
+      >.nav{
+         li{
+            &:hover a{}
+            a{}
+         }
+      }
+      >.sns{
+         li{
+            a>svg{
+               &:hover{}
+            }
+         }
+      }
+      >div{
+         >#SmileButton{}
+         em{}
+         span{}
+      }
+      .nav-Cover{
+      }
+   }
+
+      // ■■■■■ Home ■■■■■
+   #Home{
+      .canvasBox{
+         canvas{
+         } // 캔버스 배경색 (z = 1)
+         h1{top: 50px ; left: 40px;}
+         .mouseBox{
+            >.mouse{}
+            >p{}
+         }
+      }
+      // 섹션 1
+      .section1{
+         .inner{
+            >div{
+               .profile{ // 위쪽 div
+                  img{width: 40%; height: 70%;}
+                  ul{
+                     li{font-size: 19px;
+                        span{font-size: 17px; line-height: 17px;}
+                     } 
+                  }
+               }
+               .greetings{ // 아래쪽 div
+                  h1{margin-top: 30px;}
+                  em{font-size: 14px;}
+               }
+            }  
+         }
+      }
+      // 섹션 2
+      .section2{
+         .inner{
+            #Skill{
+               h1{}
+               .Skill-box{width: 430px;
+                  // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+                  .Skill-button{ 
+                     .skill-Img{ 
+                     }
+                  }
+               }
+               .Skill-memo{ // Skill-button 의 tab 메뉴
+                  width: 430px; height: 550px;
+                  >div{
+                     h3{}
+                     p{}
+                  }
+               }
+            }
+         }
+      }
+   }
+   
+   // ■■■■■ Contact ■■■■■
+   #Contact{
+      .inner{
+         >div{
+            >ul{
+               >li{
+                  svg{}
+               }
+            }
+            #TodoList{
+               >ul{
+                  >li{
+                     >button{}
+                  }
+               }
+            }
+         }
+      }
+   }
+   // ■■■■■ Port ■■■■■
+   #Port{
+      .inner{
+         section{
+            >div{ // section inner (섹션 이너)
+               width: 85%;
+               h1{}
+               >div{padding: 30px;
+                  .jpegBox{height: 180px;
+                     img{}
+                  }
+                  article{
+                     h3{font-size: 18px;}
+                     p{font-size: 15px;
+                        >span{}
+                        img{}
+                     }
+                     a{}
+                     button{}
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+// 모바일 사이즈
+@media screen and (max-width: 390px){
+         // ■■■■■ Nav ■■■■■
+   #NavLeft{
+      h1{}
+      >.nav{
+         li{
+            &:hover a{}
+            a{}
+         }
+      }
+      >.sns{
+         li{
+            a>svg{
+               &:hover{}
+            }
+         }
+      }
+      >div{
+         >#SmileButton{}
+         em{}
+         span{}
+      }
+      .nav-Cover{
+      }
+   }
+
+      // ■■■■■ Home ■■■■■
+   #Home{
+      .canvasBox{
+         canvas{
+         } // 캔버스 배경색 (z = 1)
+         h1{}
+         .mouseBox{
+            >.mouse{}
+            >p{}
+         }
+      }
+      // 섹션 1
+      .section1{
+         .inner{
+            >div{
+               .profile{ // 위쪽 div
+                  height: 28%;
+                  img{width: 40%; height: 70%;}
+                  ul{
+                     li{font-size: 17px;
+                        span{font-size: 15px; line-height: 15px;}
+                     } 
+                  }
+               }
+               .greetings{ // 아래쪽 div
+                  h1{margin-top: 120px;}
+                  em{font-size: 12px;}
+               }
+            }  
+         }
+      }
+      // 섹션 2
+      .section2{
+         .inner{
+            #Skill{
+               h1{}
+               .Skill-box{width: 320px;
+                  // 박스 넓이를 skill-button 갯수 *100 으로 지정함. 그래서 1100px
+                  .Skill-button{width: 80px; height: 80px;
+                     .skill-Img{width: 60px; height: 60px; padding: 10px;
+                     }
+                  }
+               }
+               .Skill-memo{ // Skill-button 의 tab 메뉴
+                  width: 320px; height: 550px;
+                  >div{
+                     h3{}
+                     p{font-size: 13px;}
+                  }
+               }
+            }
+         }
+      }
+   }
+   
+   // ■■■■■ Contact ■■■■■
+   #Contact{
+      .inner{
+         >div{
+            >ul{
+               >li{
+                  svg{}
+               }
+            }
+            #TodoList{
+               >ul{
+                  >li{
+                     >button{}
+                  }
+               }
+            }
+         }
+      }
+   }
+   // ■■■■■ Port ■■■■■
+   #Port{
+      .inner{
+         section{
+            >div{ // section inner (섹션 이너)
+               width: 100%; height: 100%;
+               h1{padding: 15px 20px; font-size:28px}
+               >div{padding: 10px 20px;
+                  .jpegBox{height: 140px;
+                     img{}
+                  }
+                  article{
+                     h3{font-size: 16px;}
+                     p{font-size: 14px;
+                        >span{font-size: 16px;}
+                        img{margin-left: 10px; margin-right: 5px;}
+                     }
+                     a{}
+                     button{}
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+// 호버가 가능한 환경 : 즉 pc를 의미
+@media (hover: hover) {
+   body {overflow: hidden;}
+}
