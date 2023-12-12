@@ -246,7 +246,7 @@ body{ // 전체 바탕색
 #Port{
    width: 100vw;height: 100vh;
    .inner{
-      height: 700%; // 포트폴리오 갯수 * 100 %
+      height: 800%; // ─────★ 포트폴리오 갯수 * 100 % ★───── 아주 중요한 부분
       display: flex; flex-direction: column-reverse;
       section{width: 100%;height: 100vh;  @extend .flexCenter; 
          >div{ // section inner (섹션 이너)
@@ -256,6 +256,7 @@ body{ // 전체 바탕색
                background: #9eb3a850; 
                padding: 0 70px; border-radius: 20px 20px 0 0; box-sizing: border-box;
                border-bottom: 1px solid #9eb3a850;
+               &.section8h1{background:#db422e42}
                
             }
             >div{
@@ -276,7 +277,8 @@ body{ // 전체 바탕색
                      &:nth-child(2){display: flex; align-items: center;}
                      &:nth-last-child(1){margin-bottom: 0;}
                         span{font-size: 18px; font-weight: bold;}
-                        a:hover{color: $textHover;}
+                        a{font-weight: bold;}
+                        a:hover{color: $textHover; }
                         img{width: 50px; height: 50px; margin-left: 15px; margin-right: 5px;}
                   }
                   div{display: flex; justify-content: space-between;

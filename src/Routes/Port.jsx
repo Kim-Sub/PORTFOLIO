@@ -9,6 +9,7 @@ import ButtonCodeview from '../components/Button-Codeview';
 const Port = () => {
    return (
       <div id='Port'>
+         {/* ■■■ 프로젝트 추가시 #Port .inner 높이 수정해줘야함 ■■■ */}
          <div className='inner'>
             {/* 프로젝트1 */}
             <section className='section1'>
@@ -51,7 +52,7 @@ const Port = () => {
                            <img src={process.env.PUBLIC_URL + '/img/skills/CSS.svg'} alt="스텍 이미지" />CSS
                            <img src={process.env.PUBLIC_URL + '/img/skills/JavaScript.svg'} alt="스텍 이미지" />JavaScript
                         </p>
-                        <p>개발 기간　:　2일</p>
+                        <p>개발 기간　:　5일</p>
                         <p>참여도　:　개인 100%</p>
                         <p><span>요약　:　창작 웹</span><br />
                         html과 css를 학습한 후, js를 시작하며 배운 정규식 표현으로 회원가입 페이지를 구축하였다. <br />
@@ -78,7 +79,7 @@ const Port = () => {
                            <img src={process.env.PUBLIC_URL + '/img/skills/Bootstrap.svg'} alt="스텍 이미지" />Bootstrap
                            <img src={process.env.PUBLIC_URL + '/img/skills/Sass.svg'} alt="스텍 이미지" />sCSS
                         </p>
-                        <p>개발 기간　:　3일</p>
+                        <p>개발 기간　:　5일</p>
                         <p>참여도　:　개인 100%</p>
                         <p><span>요약　:　부트스트랩</span><br />
                         부트스트랩으로 전반적인 프레임을 완성하였고<br />
@@ -195,6 +196,34 @@ const Port = () => {
                         <div>
                            <Link to="https://kim-sub.github.io/React-Movie/" target='blank_'><p><ButtonNormal/></p></Link>
                            <Link to="https://github.com/Kim-Sub/React-Movie" target='blank_'><p><ButtonCodeview/></p></Link>
+                        </div>
+                     </article>
+                  </div>
+               </div>
+            </section>
+            {/* 프로젝트8 */}
+            <section className='section8'>
+               <div>
+                  <h1 className='section8h1'>Project 08　─　Real Project</h1>
+                  <div>
+                     <div className='jpegBox'>
+                        <img src={require('../img/portfolio8.png')} alt="포폴 프로젝트 이미지" />
+                     </div>
+                     <article>
+                        <h3>프로젝트 이름　:　Raw Nap Coffee Haus.</h3>
+                        <p>메인 툴　:　
+                           <img src={process.env.PUBLIC_URL + '/img/skills/React.svg'} alt="스텍 이미지" />React
+                           <img src={process.env.PUBLIC_URL + '/img/skills/Sass.svg'} alt="스텍 이미지" />sASS
+                        </p>
+                        <p>개발 기간　:　진행중</p>
+                        <p>참여도　:　개인 100%</p>
+                        <p><span>요약　:　창작 웹 / 서비스 예정</span><br />
+                        <a href='https://map.naver.com/p/search/%EC%83%AC%EB%A1%9C%EC%9A%B0%EC%BB%A4%ED%94%BC' target='blank_'>샬로우커피(Shallow Coffee)</a>에서 세컨드 브랜드로 준비 중인 로우냅 커피하우스이다.<br />
+                           12월 25일 전후로 런칭을 목표하고 개발중이다. 
+                        </p>
+                        <div>
+                           <Link to="https://kim-sub.github.io/Rawnap-Coffee/" target='blank_'><p><ButtonNormal/></p></Link>
+                           <Link to="https://github.com/Kim-Sub/Rawnap-Coffee" target='blank_'><p><ButtonCodeview/></p></Link>
                         </div>
                      </article>
                   </div>
