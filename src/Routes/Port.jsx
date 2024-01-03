@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import ButtonNormal from '../components/Button-Normal';
 import ButtonCodeview from '../components/Button-Codeview';
 
+import Chatbot from '../components/Chatbot';
+
+
+
 
 
 const Port = () => {
@@ -227,6 +231,13 @@ const Port = () => {
                         </div>
                      </article>
                   </div>
+               </div>
+            </section>
+            {/* 프로젝트9 */}
+            <section className='section9'>
+               <div>
+               <h1>Project 09　─　OpenAI Chat BOT</h1>
+                  <Chatbot />
                </div>
             </section>
          </div>

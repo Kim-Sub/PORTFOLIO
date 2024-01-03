@@ -44,7 +44,7 @@ const NavLeft = () => {
                <span>NightMode</span>
                <NightModeBtn />
                <em>UPDATA.</em>
-               <span>2023-12-12</span>
+               <span>2024-01-04</span>
             </div>
             <div className="nav-Cover">
                ▲ MENU ▼
