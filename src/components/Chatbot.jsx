@@ -5,7 +5,7 @@ const Chatbot = () => {
    const [userInput, setUserInput] = useState('');
    const [loading, setLoading] = useState(false);
 
-   const apiKey = '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';
+   const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
    const apiEndpoint = 'https://api.openai.com/v1/chat/completions';
 
    const addMessage = (sender, message) => {
