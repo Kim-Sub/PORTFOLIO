@@ -47,7 +47,7 @@ const Home = () => {
                   <div className='profile'>
                      <img src={require("../img/SUB.jpg")} alt="" />
                      <ul>
-                        <li>name. <span>김문섭</span></li>
+                        <li>name. <span>김섭</span></li>
                         <li>birth. <span>92.11.01</span></li>
                         <li onClick={handleOpenModal}>job. <span> - </span></li>
                            <Modal isOpen={isModalOpen} onClose={handleCloseModal} content={
